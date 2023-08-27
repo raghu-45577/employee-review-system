@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/adminView.css" />
+<div class="container">
+  <% if(employees.length===0) {%>
+  <div>No Employees Joined the Organization</div>
+  <%} else {%>
+  <div class="emp-list">
+    <% for(employee of employees) {%>
+    <div class="emp">
+      <div class="field">
+        <a href="/user/<%=employee.id%>"><%=employee.name%></a>
+      </div>
+      <div class="field">
+        <form class="btn-form" method="post">
+          <% if(employee.type==="employee") {%>
+          <button
+            class="btn-role"
+            formaction="/user/<%=employee.id%>/makeadmin"
+          >
+            Make Admin
+          </button>
+          <%} else {%>
+          <button
+            class="btn-role"
+            formaction="/user/<%=employee.id%>/makeemployee"
+          >
+            Make Employee
+          </button>
+          <%}%>
+        </form>
+      </div>
+      <div class="field">
+        <form class="btn-form" method="post">
+          <button class="btn-remove" formaction="/user/<%=employee.id%>/remove">
+            Remove
+          </button>
+        </form>
+      </div>
+    </div>
+    <%}%>
+  </div>
+  <%}%>
+</div>

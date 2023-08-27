@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/add_company.css" />
+<div class="container">
+  <form action="/save-company" method="post" class="add-company-form">
+    <div class="input">
+      <input
+        type="text"
+        name="companyName"
+        placeholder="Company Name"
+        required
+      />
+    </div>
+    <div class="input">
+      <input type="text" name="name" placeholder="Type your name..." required />
+    </div>
+    <div class="input">
+      <input type="email" name="emailId" placeholder="Email" required />
+    </div>
+    <div class="input">
+      <input type="password" name="password" placeholder="Password" required />
+    </div>
+    <div class="input">
+      <input
+        type="password"
+        name="confirmPassword"
+        placeholder="Confirm Password"
+        required
+      />
+    </div>
+    <div class="button">
+      <input class="btn" type="submit" value="Add Company" />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="/css/employee_review.css" />
+<div class="container">
+  <div class="emp-info">
+    <div><%= employee.name%></div>
+    <div><%= employee.emailId%></div>
+    <div>Reviews received : <%=employee.reviewReceived.length%></div>
+  </div>
+  <div class="review-section">
+    <div class="set-submit-reviews">
+      <h3>Set the Reviewer</h3>
+      <div class="set-reviewer">
+        <% if(employees.length!==0){%> <% for(emp of employees) {%>
+        <div class="emp">
+          <div><%=emp.name%></div>
+          <% if(emp.reviewPending.indexOf(employee._id)==-1) {%>
+          <form
+            action="/user/<%=employee.id%>/setReviewer/<%=emp.id%>"
+            method="post"
+          >
+            <input
+              class="btn-set-remove"
+              style="background-color: blue"
+              type="submit"
+              value="Set"
+            />
+          </form>
+          <%} else {%>
+          <form
+            action="/user/<%=employee.id%>/removeReviewer/<%=emp.id%>"
+            method="post"
+          >
+            <input
+              class="btn-set-remove"
+              style="background-color: red"
+              type="submit"
+              value="Remove"
+            />
+          </form>
+          <%}%>
+        </div>
+        <%}%> <%} else {%>
+        <div>No Employees for assinging</div>
+        <%}%>
+      </div>
+      <div class="submit-review">
+        <form
+          class="submit-form"
+          action="/user/<%=employee.id%>/savefeedback"
+          method="post"
+        >
+          <textarea
+            name="description"
+            placeholder="Provide Feedback..."
+            rows="5"
+            cols="50"
+          ></textarea>
+          <input class="btn" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <div class="received-reviews">
+      <h3>Received Reviews</h3>
+      <div class="reviews">
+        <% for(review of employee.reviewReceived) {%>
+        <div class="review">
+          <div>Feedback from <%=review.reviewedBy.name%></div>
+          <div class="result"><%=review.description%></div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+  </div>
+</div>

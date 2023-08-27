@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/profile.css" />
+<div class="container">
+  <div class="profile-info">
+    <div><h3><%=profile_user[0].company.name%> Welcomes you</h3></div>
+    <div><%= profile_user[0].name%></div>
+    <div><%= profile_user[0].emailId%></div>
+    <div>Reviews received : <%=profile_user[0].reviewReceived.length%></div>
+  </div>
+  <hr />
+
+  <% if(locals.user.reviewPending.length!==0) {%>
+  <div class="submit-reviews-container">
+    <% for(item of profile_user[0].reviewPending ) {%>
+    <div class="submit-form">
+      <div>Submit the Feedback for <%=item.name%></div>
+      <div>
+        <form action="/user/<%=item.id%>/savefeedback" method="post">
+          <textarea
+            name="description"
+            placeholder="Provide Feedback..."
+            rows="5"
+            cols="50"
+          ></textarea>
+          <input class="btn" type="Submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+
+    <%}%>
+  </div>
+  <%}%>
+</div>

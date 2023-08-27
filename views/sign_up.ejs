@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/sign_up.css" />
+<div class="container">
+  <form action="/user/create" method="POST" class="signup-form">
+    <div class="input dropdown">
+      <label>Select Company</label>&nbsp;&nbsp;
+      <select name="companyName">
+        <% for(company of companies) {%>
+        <option value="<%=company.name%>"><%=company.name%></option>
+        <%}%>
+      </select>
+    </div>
+    <div class="input">
+      <input type="text" name="name" placeholder=" your name" required />
+    </div>
+    <div class="input">
+      <input type="email" name="emailId" placeholder="Email" required />
+    </div>
+    <div class="input">
+      <input type="password" name="password" placeholder="password" required />
+    </div>
+    <div class="input">
+      <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm password"
+        required
+      />
+    </div>
+    <div class="button">
+      <input class="btn" type="submit" value="Sign Up" />
+    </div>
+  </form>
+</div>

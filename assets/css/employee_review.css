@@ -1,0 +1,134 @@
+.container {
+  width: 100%;
+  height: 90%;
+  color: rgb(71, 94, 246);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+.emp-info {
+  width: 30%;
+  height: 30%;
+  border: 2px solid rgb(71, 94, 246);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.review-section {
+  width: 80%;
+  height: 60%;
+  margin-top: 10px;
+  display: flex;
+  border: 1px solid rgb(71, 94, 246);
+}
+
+.set-submit-reviews {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-right: 2px solid rgb(71, 94, 246);
+}
+
+.set-reviewer {
+  width: 80%;
+  height: 40%;
+  padding: 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 2px solid rgb(71, 94, 246);
+}
+
+.submit-review {
+  width: 80%;
+  height: 30%;
+  padding: 10px;
+}
+
+.submit-form {
+  width: 80%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.submit-form textarea {
+  width: 90%;
+  height: 90%;
+}
+
+.btn {
+  background-color: blueviolet;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  height: 25%;
+  width: 15%;
+}
+
+.emp {
+  display: flex;
+  width: 70%;
+  height: 50px;
+  border: 1px solid rgb(71, 94, 246);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.emp div {
+  width: 40%;
+  font-weight: bolder;
+}
+
+.emp form {
+  width: 50%;
+}
+
+.btn-set-remove {
+  margin-top: 15px;
+  width: 100%;
+  height: 60%;
+  color: white;
+  font-weight: bolder;
+  font-size: medium;
+}
+
+.received-reviews {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews {
+  width: 90%;
+  height: 90%;
+  border: 2px solid rgb(71, 94, 246);
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.review {
+  width: 80%;
+  height: 60px;
+  background-color: rgb(71, 94, 246);
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.result {
+  margin-left: 15px;
+}
