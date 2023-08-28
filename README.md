@@ -5,7 +5,11 @@
 
 ### Usage:
 
--
+- This first phase of this application is creating the company.
+- Whenever the company gets created the admin of the company also gets created.
+- Admin is the user who can add,edit,remove Employees from the Company.
+- Admin can even make another employee admin and can allot an employee to other employee for giving feedbacks.
+- Employee can able to sign up and see the number of feedbacks received.
 
 ### Folder Structure
 
