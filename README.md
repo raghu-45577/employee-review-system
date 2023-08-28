@@ -1,4 +1,4 @@
-## Habit Tracker
+## Employee Review System
 
 - This Application is used to Review the employees in the Company.
 - NodeJs, expressJs, mongoDB and ejs technologies are used in creation of this application.
@@ -15,7 +15,7 @@
 
 ```
 
-Habit-Tracker
+Employee-Review-System
     |
     |
     |--->assets---->|--->css
